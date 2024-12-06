@@ -44,7 +44,7 @@ export default function Portfolio({
       <div className="absolute bottom-0 right-0 left-0 m">
         <div className="flex items-center justify-center gap-2">
           {slides.map((_, i) => (
-            <div
+            <div key={i}
               className={`
               transition-all w-3 h-3 bg-red-500 rounded-full
               ${curr === i ? "p-2" : "bg-opacity-20"}

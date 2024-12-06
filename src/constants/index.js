@@ -1,4 +1,7 @@
 import apropos from "../assets/apropos.jpg"
+import 'ionicons/dist/ionicons.js';
+
+
 const services = [
     {
       title: "Conception Plan, devis, Projet)",
@@ -17,7 +20,7 @@ const services = [
       iconBg: "#E6DEDD",
       points: [
         "Consultation initiale pour comprendre les attentes et les exigences du client.",
-        "Évaluation du site et des contraintes spécifique",
+        "Évaluation du site et des contraintes spécifiques",
         "Élaboration de plans architecturaux sur mesure, adaptés aux besoins du client",
         "Préparation d’un devis détaillé incluant tous les coûts associés au projet",
         "Suivi continu pour garantir le respect des délais et du budget",
@@ -26,7 +29,7 @@ const services = [
       ],
     },
     {
-      title: "Renovation",
+      title: "Rénovation",
       // icon: shopify,
       iconBg: "#E6DEDD",
       points: [
@@ -89,14 +92,50 @@ const services = [
   export { portfolio };
 
   const a_propos =  {
-      history: "créer en 2016, LRK.B. design est une entreprise de prestation de services multidisciplinaire specialisé en conception, construction et rénovation. Elle regroupe plusieurs corps de métier(maconerie.plomberie,electricité,révêtement de surfaces,menuiseries alu bois,metal,peinture,climatisation,staff.. etc.  ",
-      expertise: "L'une des forces de LRK.B. Design réside dans la richesse des corps de métier qu'elle regroupe. En intégrant des spécialistes en maçonnerie, plomberie, électricité, revêtement des surfaces, menuiserie en aluminium, bois et métal, ainsi qu'en peinture et climatisation, l'entreprise est en mesure de gérer des projets complexes avec une efficacité remarquable. Chaque corps de métier travaille en synergie, ce qui permet une communication fluide et une coordination sans faille sur le chantier. De plus, cette diversité de compétences permet à LRK.B. Design d'adapter ses services aux exigences spécifiques de chaque projet, qu'il s'agisse de rénovations délicates dans des bâtiments historiques ou de constructions modernes nécessitant des techniques pointues.",
-      history_image : apropos
+      history: "Fondée en 2016, LRK.B. design est une entreprise de prestation de services multidisciplinaire spécialisée en conception, construction et rénovation. Elle regroupe plusieurs corps de métier: maconerie,plomberie,electricité,révêtement de surfaces,menuiseries alu bois,metal,peinture,climatisation...",
+      expertise: "En intégrant, des spécialistes pour chaque corps de métier, LRK.B. Design est en mesure de superviser des projets complexes avec une efficacité remarquable. Nos équipes travaille en synergie, ce qui permet une communication fluide et une coordination sans faille sur le chantier. De plus, cette diversité de compétences permet à LRK.B.Design d'adapter ses services aux exigences spécifiques de chaque projet, qu'il s'agisse de rénovations délicates dans des bâtiments historiques ou de constructions modernes nécessitant des techniques pointues.",
+      history_image : apropos,
+      more: "De plus, la diversité des compétences au sein de notre équipe permet à LRK.B. Design d’adapter ses services aux exigences spécifiques de chaque projet. Qu'il s'agisse de rénovations délicates dans des bâtiments historiques, où le respect du patrimoine est primordial, ou de constructions modernes nécessitant des techniques pointues et des matériaux innovants, nous sommes en mesure de répondre aux besoins variés de nos clients. Cette flexibilité et cette capacité d'adaptation font de LRK.B. Design un partenaire de choix, capable de transformer des visions en réalités concrètes, tout en respectant les délais et les budgets fixés. En nous engageant à maintenir des standards de qualité élevés, nous veillons également à la satisfaction de nos clients, assurant ainsi des relations durables fondées sur la confiance et le professionnalisme."
     }
   export { a_propos };
 
 
   const vision = {
-    text: "notre vision est de se positionner en tant que leader du secteur de la construction et de la rénovation.Pour ainsi dire, il est question de mettre en place une plate-forme dédiée,garantissant des services de qualité à des prix compétitifs pour entreprises et particuliers, le tout étant orchestré par une équipe de jeunes professionnels.ambitieux et passionnés du domaine."
+    text: "Nous nous positionnons en tant que leader dans le secteur de la construction et de la rénovation. Notre objectif est de mettre en place une plate-forme dédiée, qui vous garantit des services de qualité à des prix accessibles aussi bien pour les professionnels que les particuliers. Nous sommes composés d’une équipe de jeunes ambitieux et passionnés."
   }
   export { vision }
+
+  const value = [
+     {
+      title : "Professionnalisme",
+      description: "Notre équipe, composée de spécialistes dans divers corps de métier, incarne cette valeur en adoptant une approche rigoureuse et méthodique dans la gestion de chaque projet. Nous croyons fermement que le professionnalisme passe par une communication transparente et une collaboration étroite entre tous les acteurs impliqués, ce qui permet d'assurer une coordination sans faille sur le chantier."
+     },
+     {
+      title: "Rapidité d'execution",
+      description: "Notre approche proactive commence dès la phase de planification, où nous mettons en place des stratégies claires et des échéanciers réalistes. Grâce à une coordination optimale entre nos équipes multidisciplinaires, nous garantissons une exécution fluide et rapide sur le chantier. Nous utilisons des outils de gestion de projet modernes qui nous permettent de suivre l'avancement et d'identifier rapidement les éventuels obstacles, afin d'y remédier efficacement.",
+     },
+     {
+      title: "Disponibilité",
+      description: "Notre équipe est dédiée à offrir un service personnalisé et attentif. Nous nous engageons à être présents tout au long du processus, que ce soit lors des phases de conception, de planification ou d'exécution. Grâce à une communication ouverte et transparente, nous nous assurons que nos clients se sentent soutenus et informés à chaque étape, ce qui renforce la confiance et la collaboration."
+     },
+     {
+      title: "Satisfactions client",
+      description: "Pour garantir cette satisfaction, nous adoptons une approche collaborative dès le début du projet. Nos équipes travaillent en étroite collaboration avec les clients, les impliquant dans chaque étape du processus, de la conception initiale à la réalisation finale. Cette transparence et cette communication constante permettent d'ajuster rapidement les orientations et de répondre aux préoccupations au fur et à mesure qu'elles se présentent"
+     }
+  ]
+
+  export { value }
+
+  // footer elements
+ 
+  export const COMPANY = [
+    { name: "Acceuil", link: "#" },
+    { name: "Qui sommes-nous", link: "#" },
+    { name: "Nos Services", link: "#" },
+    { name: "Contact", link: "#" },
+    { name: "Nos Realisations", link: "#" },
+  ];
+
+
+  
+ 

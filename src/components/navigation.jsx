@@ -1,17 +1,12 @@
 "use client";
 
-import { useState } from 'react'
+import { Component, useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { NavLink } from 'react-router-dom';
 
-const navigation = [
-  { name: 'page acceuil', href: '#' },
-  { name: 'Nos services', href: '#' },
-  { name: 'Qui somme nous?', href: '#' },
-  { name: 'contact', href: '#' },
-]
 
-export default function Navigation() {
+export default function Navigation({routes}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -32,16 +27,12 @@ export default function Navigation() {
           
           <div className='w-full flex items-center justify-center'>
           <div className="hidden lg:flex fixed lg:gap-x-12  lg:bg-black px-5 py-3  rounded-md ">
-            {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-white">
-                {item.name}
-              </a>
+            {routes.map((route) => (
+              
+                 <NavLink key={route.name} className={({isActive}) => isActive?"text-red-500 font-semibold text-base" : "text-white"} to={route.href}>{route.name}</NavLink>
             ))}
           </div>
           </div>
-          
-          
-          
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
@@ -51,7 +42,7 @@ export default function Navigation() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
-                className="-m-2.5 rounded-md p-2.5 text-white "
+                className="-m-2.5 rounded-md p-2.5 text-white bg-black"
               >
                 <span className="sr-only">Close menu</span>
                 <XMarkIcon aria-hidden="true" className="size-6" />
@@ -59,76 +50,23 @@ export default function Navigation() {
             </div>
 
             <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+              <div className="-my-6">
+                <div className="space-y-2 py-6 divide-y divide-gray-500">
+                  {routes.map((route) => (
+                    <p
+                      key={route.name}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7"
                     >
-                      {item.name}
-                    </a>
+                      <NavLink  className={({isActive}) => isActive?"text-red-500 font-bold text-base" : "text-black"} to={route.href} >{route.name}</NavLink>
+                    </p>
                   ))}
                 </div>
-                <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
-                </div>
+              
               </div>
             </div>
           </DialogPanel>
         </Dialog>
       </header>
-
-      
     </div>
   )
 }
-
-
-// import  { useState } from "react";
-// import { HoveredLink, Menu, MenuItem } from "../components/ui/navbar-menu"
-// import { cn } from "../lib/utils";
-
-// export function Navigation() {
-//   return (
-//     <div className="relative w-full flex items-center justify-center">
-//       <Navbar className="top-2" />
-//     </div>
-//   );
-// }
-
-// export default Navigation;
-
-// function Navbar({ className }: { className?: string }) {
-//   const [active, setActive] = useState<string | null>(null);
-//   return (
-//     <div
-//       className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
-//     >
-//       <Menu setActive={setActive}>
-//         <MenuItem setActive={setActive} active={active} item="Services">
-//           <div className="flex flex-col space-y-4 text-sm">
-//             <HoveredLink href="/web-dev">Web Development</HoveredLink>
-//             <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-//             <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-//             <HoveredLink href="/branding">Branding</HoveredLink>
-//           </div>
-//         </MenuItem>
-//         <MenuItem setActive={setActive} active={active} item="Pricing">
-//           <div className="flex flex-col space-y-4 text-sm">
-//             <HoveredLink href="/hobby">Hobby</HoveredLink>
-//             <HoveredLink href="/individual">Individual</HoveredLink>
-//             <HoveredLink href="/team">Team</HoveredLink>
-//             <HoveredLink href="/enterprise">Enterprise</HoveredLink>
-//           </div>
-//         </MenuItem>
-//       </Menu>
-//     </div>
-//   );
-// }

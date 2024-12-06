@@ -24,7 +24,7 @@ const SocialsTwo = () => {
       <div className="flex flex-col items-start gap-y-5 text-xl ml-10">
         <div className="flex gap-x-4">
              <div className="bg-black rounded-md px-2 py-2"><a href={''} className="hover:text-accent transition-all duration-300 text-white"><RiWhatsappLine size={40}/></a></div>
-             <p className="text-black mt-3 text-sm md:text-lg">(+237) 699 719 409</p>
+             <p className="text-black mt-3 text-sm md:text-lg">+237 677 20 96 28</p>
            </div>
             <div className="flex gap-x-4 items-center justify-center">
              <div className="bg-black rounded-md px-2 py-2 h-14 mt"><a href={''} className="hover:text-accent transition-all duration-300 text-white"><RiMailLine size={40}/></a></div>
@@ -52,7 +52,7 @@ const SocialsTwo = () => {
           <div className="flex flex-col items-start gap-y-5">
            <div className="flex gap-x-4">
              <div className="bg-black rounded-md px-2 py-2"><a href={''} className="hover:text-accent transition-all duration-300 text-white"><RiWhatsappLine size={40}/></a></div>
-             <p className="text-black mt-3 text-sm md:text-lg">(+237) 699 719 409</p>
+             <p className="text-black mt-3 text-sm md:text-lg">+237 677 20 96 28</p>
            </div>
             <div className="flex gap-x-4 items-center justify-center">
              <div className="bg-black rounded-md px-2 py-2 h-14 mt"><a href={''} className="hover:text-accent transition-all duration-300 text-white"><RiMailLine size={40}/></a></div>
