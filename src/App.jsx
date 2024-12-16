@@ -9,9 +9,6 @@ import ContactPage from "./pages/contact"
 
 
 
- 
-
-
 function  App() {
 
   const navigation = [
@@ -21,7 +18,6 @@ function  App() {
     { name: 'Contact', href: '/contact', component: ContactPage},
   ]
 
-  
   return (
     <BrowserRouter basename="/lrk-b-designv1">
       <div className="w-screen max-[550px]:w-full">
