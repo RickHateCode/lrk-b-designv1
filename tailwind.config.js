@@ -7,10 +7,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "bgAbout": "url('/lrk-b-designv1/Bgabout.jpg')",
-        "bgService": "url('/lrk-b-designv1/BgService.jpg')",
-        "bgProverb": "url('/lrk-b-designv1/background.jpg')",
-        "bgAfrican": "url('/lrk-b-designv1/africanMan.jpg')",
+        "bgAbout": "url('/lrk-b-designv1/assets/Bgabout.jpg')",
+        "bgService": "url('/lrk-b-designv1/assets/Bgservice.jpg')",
+        "bgProverb": "url('/lrk-b-designv1/assets/background.jpg')",
+        "bgAfrican": "url('/lrk-b-designv1/assets/africanMan.jpg')",
+        
       }
     },
   },
